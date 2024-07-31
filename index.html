@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -117,6 +118,28 @@
                 transform: translateY(0);
             }
         }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info a {
+            color: #003366;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info .icon {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -125,10 +148,11 @@
         <h1>Contact Us</h1>
     </header>
     <main class="content">
-        <p>If you have any questions, please feel free to reach out to us at:</p>
-        <p>Email: <a href="mailto:connectpes01@gmail.com">connectpes01@gmail.com</a></p>
-        <p>Phone number 1: (+91) 8951475102, Parikshit Sharma</p>
-        <p>Phone number 2: (+91) 9620374123, Vedant Marathe</p>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope icon"></i>Email: <a href="mailto:connectpes01@gmail.com">connectpes01@gmail.com</a></p>
+            <p><i class="fas fa-phone-alt icon"></i>Phone number 1: (+91) 8951475102, Parikshit Sharma</p>
+            <p><i class="fas fa-phone-alt icon"></i>Phone number 2: (+91) 9620374123, Vedant Marathe</p>
+        </div>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> connectPES. All rights reserved.</p>
