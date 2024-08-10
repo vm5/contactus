@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
     <style>
         body {
-            font-family: Verdana;
+            font-family: 'Verdana', sans-serif;
             margin: 0;
             padding: 0;
-            background: #ffffff; /* White background */
+            background: linear-gradient(to bottom, #ffffff, #f2f2f2);
             color: #333;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            animation: fadeIn 2s ease-in-out; /* Animation for body */
+            animation: fadeIn 2s ease-in-out;
         }
 
         .header {
-            background-color: #000000; /* Black background */
-            color: #ffffff; /* White text for contrast */
+            background-color: #333333;
+            color: #ffffff;
             padding: 20px;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            animation: slideIn 1s ease-out; /* Animation for header */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
-            border-bottom: 3px solid #FF6F00; /* Border to distinguish from content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 3px solid #FF6F00;
         }
 
         .header img {
-            width: 60px; /* Adjusted size of the logo */
+            width: 60px;
             margin-right: 20px;
         }
 
@@ -40,53 +41,75 @@
             margin: 0;
             font-size: 28px;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
 
         .content {
-            padding: 40px; /* Increased padding */
+            padding: 40px;
             max-width: 800px;
             margin: 20px auto;
             background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            animation: fadeInUp 2s ease-out; /* Animation for content */
-            flex: 1; /* To push footer to bottom */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            flex: 1;
             text-align: center;
-            border: 1px solid #FF6F00; /* Border for distinction */
+            border: 1px solid #FF6F00;
         }
 
         .content p {
             font-size: 18px;
-            line-height: 1.6;
-            color: #333; /* Dark text */
+            line-height: 1.8;
+            color: #333;
+            margin: 15px 0;
         }
 
         .content a {
-            color: #FF6F00; /* Orange color for links */
+            color: #FF6F00;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
         }
 
         .content a:hover {
             text-decoration: underline;
+            color: #e65c00;
         }
 
         footer {
-            background-color: #000000; /* Black background */
-            color: #ffffff; /* White text for contrast */
+            background-color: #333333;
+            color: #ffffff;
             padding: 20px;
             text-align: center;
-            position: relative;
-            bottom: 0;
             width: 100%;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
-            border-top: 3px solid #FF6F00; /* Border to distinguish from content */
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            border-top: 3px solid #FF6F00;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+
+        .footer-links {
+            margin: 10px 0;
         }
 
         .footer-links a {
-            color: #ffffff; /* White text for contrast */
+            color: #ffffff;
             margin: 0 10px;
             text-decoration: none;
+            font-size: 14px;
             transition: color 0.3s;
         }
 
@@ -98,58 +121,30 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
         }
 
-        .contact-info a {
-            color: #FF6F00; /* Orange color for links */
-            text-decoration: none;
+        .contact-info p {
+            display: flex;
+            align-items: center;
             font-size: 18px;
-            font-weight: bold;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
         }
 
         .contact-info .icon {
             margin-right: 10px;
-            color: #FF6F00; /* Orange color for icons */
+            color: #FF6F00;
         }
 
-        /* Keyframes for animations */
         @keyframes fadeIn {
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
 
-        @keyframes slideIn {
-            from {
-                transform: translateY(-20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Media Queries for responsiveness */
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 24px;
@@ -158,6 +153,10 @@
             .content {
                 padding: 20px;
                 width: 90%;
+            }
+
+            .contact-info p {
+                font-size: 16px;
             }
 
             .contact-info a {
@@ -180,12 +179,13 @@
                 width: 95%;
             }
 
-            .contact-info a {
+            .contact-info p {
                 font-size: 14px;
             }
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <img src="/nucleus.png" alt="LOGO" />
@@ -199,11 +199,17 @@
         </div>
     </main>
     <footer>
-         <img src="/nucleus.png" alt="LOGO" />
+        <img src="/nucleus.png" alt="LOGO" />
         <p>&copy; <span id="year"></span> nucleusFUSION. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Contributors</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
     </footer>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>
