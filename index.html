@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
     <style>
         body {
-            font-family: 'Verdana';
+            font-family: 'Verdana', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(to bottom, #ffffff, #f2f2f2);
@@ -21,8 +20,8 @@
         }
 
         .header {
-            background-color: #333333;
-            color: #ffffff;
+            background-color: #333;
+            color: #fff;
             padding: 20px;
             text-align: center;
             display: flex;
@@ -49,45 +48,67 @@
             padding: 40px;
             max-width: 800px;
             margin: 20px auto;
-            background-color: #ffffff;
+            background-color: #fff;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border-radius: 12px;
-            flex: 1;
             text-align: center;
             border: 1px solid #FF6F00;
         }
 
-        .content p {
-            font-size: 18px;
-            line-height: 1.8;
+        .content h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
             color: #333;
-            margin: 15px 0;
         }
 
-        .content a {
+        .contact-info {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info .icon {
+            margin-right: 15px;
+            color: #FF6F00;
+        }
+
+        .contact-info .phone-number {
+            font-weight: bold;
+        }
+
+        .contact-info a {
             color: #FF6F00;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
 
-        .content a:hover {
+        .contact-info a:hover {
             text-decoration: underline;
             color: #e65c00;
         }
 
         footer {
-            background-color: #333333;
-            color: #ffffff;
+            background-color: #333;
+            color: #fff;
             padding: 20px;
             text-align: center;
             width: 100%;
             box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
             border-top: 3px solid #FF6F00;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
         footer img {
@@ -117,29 +138,10 @@
             color: #FF6F00;
         }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .contact-info p {
-            display: flex;
-            align-items: center;
-            font-size: 18px;
-        }
-
-        .contact-info .icon {
-            margin-right: 10px;
-            color: #FF6F00;
-        }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
             }
-
             to {
                 opacity: 1;
             }
@@ -156,10 +158,6 @@
             }
 
             .contact-info p {
-                font-size: 16px;
-            }
-
-            .contact-info a {
                 font-size: 16px;
             }
         }
@@ -192,10 +190,11 @@
         <h1>Contact Us</h1>
     </header>
     <main class="content">
+        <h2>Get in Touch</h2>
         <div class="contact-info">
             <p><i class="fas fa-envelope icon"></i>Email: <a href="mailto:nucleusfusion1.0@gmail.com">nucleusfusion1.0@gmail.com</a></p>
-            <p><i class="fas fa-phone-alt icon"></i>Phone number 1: (+91) 8951475102, Parikshit Sharma</p>
-            <p><i class="fas fa-phone-alt icon"></i>Phone number 2: (+91) 9620374123, Vedant Marathe</p>
+            <p><i class="fas fa-phone-alt icon"></i class="phone-number">Phone number 1:</i> (+91) 8951475102, Parikshit Sharma</p>
+            <p><i class="fas fa-phone-alt icon"></i class="phone-number">Phone number 2:</i> (+91) 9620374123, Vedant Marathe</p>
         </div>
     </main>
     <footer>
